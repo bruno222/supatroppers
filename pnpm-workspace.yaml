@@ -1,0 +1,7 @@
+packages:
+  - frontend
+  - brain-server
+  - shared
+allowBuilds:
+  esbuild: true
+

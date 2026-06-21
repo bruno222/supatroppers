@@ -1,0 +1,25 @@
+name: deploy-brain
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'brain-server/**'
+      - 'shared/**'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/deploy-brain.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: fly-brain
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v5
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: Deploy to fly.io
+        run: flyctl deploy --remote-only --config brain-server/fly.toml --dockerfile brain-server/Dockerfile .
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
