@@ -6,7 +6,7 @@
 
 ---
 
-SupaTroppers is a cooperative pixel-art game inspired by the classic Lemmings. Up to 10 players share the same screen in real time, each controlling tools to guide a swarm of troppers safely to the exit before time runs out.
+SupaTroppers is a cooperative pixel-art game inspired by the classic [Lemmings](https://en.wikipedia.org/wiki/Lemmings_(video_game)). Up to 10 players share the same screen in real time, each controlling tools to guide a swarm of troppers safely to the exit before time runs out.
 
 No account needed. No install. Just click and play.
 
